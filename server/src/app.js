@@ -13,8 +13,6 @@ app.use(
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get("/status", (req, res) => {
-  res.send("hello world");
-});
+require('./routes')(app)
 
 app.listen(process.env.PORT || 8081);
